@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>week 3</title>
+    <link rel="stylesheet" href="leaflet.css" />
+    <script src="leaflet.js"></script>
+    <style>
+        body {
+        padding: 0;
+        margin: 0;
+        }
+        html, body, #map {
+        height: 100%;
+        width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        let map = L.map("map", {center: [-1.0943, 37.0133], zoom: 17});
+        L.tileLayer(
+            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", 
+            {attribution: '&copy; <a href="http://' + 
+            'www.openstreetmap.org/copyright">OpenStreetMap</a>'}
+        ).addTo(map);
+
+        /*markers*/
+        let oldLibrary = L.marker([-1.1806, 36.9344]).addTo(map); emb.bindPopup("EMB");
+        let graduationField = L.marker([-1.1779, 36.9332]).addTo(map); assemblyHall.bindPopup("Assembly Hall");
+        let soccer = L.marker([ -1.1808, 36.9317]).addTo(map); scc.bindPopup("SCC");
+        let KUPostModernLibrary = L.marker([-1.1781, 36.9361]).addTo(map); gradSquare.bindPopup("Graduation Square");
+        let CentralAdmin = L.marker([-1.1795, 36.9363]).addTo(map); adm1.bindPopup("Jkuat Admin Block 1");
+    </script>
+</body>
+</html>
